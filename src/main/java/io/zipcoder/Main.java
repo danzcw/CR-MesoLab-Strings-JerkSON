@@ -2,7 +2,9 @@ package io.zipcoder;
 
 import org.apache.commons.io.IOUtils;
 
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
+import java.util.Map;
 
 
 public class Main {
@@ -16,13 +18,19 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception{
+
         ItemParser ip = new ItemParser();
-        Main main = new Main();
+
         String output = (new Main()).readRawDataToString();
-        ArrayList<String> test = ip.parseRawDataIntoStringArray(output);
-        System.out.println(ip.parseStringIntoItem(test.get(24).toString()));
-        //System.out.println(ip.parseRawDataIntoStringArray(main.readRawDataToString()));
+
+        System.out.println(ip.buildOutput());
+
+
+
+            }
+        }
+
 
         // TODO: parse the data in output into items, and display to console.
-    }
-}
+
+
